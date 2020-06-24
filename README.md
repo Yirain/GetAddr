@@ -2,7 +2,7 @@
 Get ip address from network interface
 
 ## Description
-Obtain the valid IP address of the first network card in order， supports IPv4 and IPv6
+Obtain the valid IP address of the first network card in order, supports IPv4 and IPv6
 
 ## Usage
 ./get_addr.sh VERSION INTERFACE_1 INTERFACE_2 ... INTERFACE_N
