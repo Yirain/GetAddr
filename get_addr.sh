@@ -18,7 +18,7 @@ elif [ $ip_version == "4" ]; then
 elif [ $ip_version == "6" ]; then
     for interface in $interfaces;
     do
-        var=$(ip address show $interface 2>/dev/null | grep global | grep -v temporary | grep -o -P '(?<=inet6 ).*(?=/)')
+        var=$(ip address show $interface 2>/dev/null | grep global | grep -v temporary | grep -v /128 | grep -o -P '(?<=inet6 ).*(?=/)')
         if [ -n "$var" ]; then
             echo $var;
             exit 0;
